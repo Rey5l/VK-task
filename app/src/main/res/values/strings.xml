@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="logo_name">Reysl</string>
+    <string name="description_btn">This is button</string>
+    <string name="tags">Tags</string>
+    <string name="smartphones">Smartphones</string>
+    <string name="decoration">Home-decoration</string>
+    <string name="groceries">Groceries</string>
+    <string name="skincare">Skincare</string>
+    <string name="fragrances">Fragrances</string>
+    <string name="laptops">Laptops</string>
+    <string name="products">Products</string>
+    <string name="product_name">Products name</string>
+    <string name="product_description">Product Description</string>
+    <string name="price">$569</string>
+    <string name="buy_text">Buy</string>
+</resources>
