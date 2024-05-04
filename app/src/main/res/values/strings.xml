@@ -12,6 +12,7 @@
     <string name="products">Products</string>
     <string name="product_name">Products name</string>
     <string name="product_description">Product Description</string>
-    <string name="price">$569</string>
+    <string name="price">569</string>
+    <string name="sign">$</string>
     <string name="buy_text">Buy</string>
 </resources>

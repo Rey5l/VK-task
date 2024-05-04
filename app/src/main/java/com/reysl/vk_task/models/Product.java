@@ -6,10 +6,11 @@ public class Product {
     private String price;
     private String thumbnail;
 
-    public Product (String title, String description, String price) {
+    public Product (String title, String description, String price, String thumbnail) {
         this.title = title;
         this.description = description;
         this.price = price;
+        this.thumbnail = thumbnail;
     }
 
 
@@ -37,12 +38,11 @@ public class Product {
         this.price = price;
     }
 
-//    public String getThumbnail() {
-//        return this.thumbnail;
-//    }
-//
-//    public void setThumbnail(String thumbnail) {
-//        this.thumbnail = thumbnail;
-//    }
+    public String getThumbnail() {
+        return this.thumbnail;
+    }
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
 
 }

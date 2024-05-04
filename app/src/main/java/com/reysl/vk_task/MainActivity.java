@@ -1,13 +1,13 @@
 package com.reysl.vk_task;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,7 +16,6 @@ import com.reysl.vk_task.models.Product;
 import com.reysl.vk_task.retrofit.ProductApi;
 import com.reysl.vk_task.retrofit.ProductResponse;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recView;
     private final ArrayList<Product> products = new ArrayList<>();
     private ProductApi productApi;
+    private ImageView productImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void updateRecyclerView() {
         ProductAdapter productAdapter = new ProductAdapter(this, products);
-        recView.setLayoutManager(new LinearLayoutManager(this));
+        recView.setLayoutManager(new GridLayoutManager(this, 2));
         recView.setAdapter(productAdapter);
     }
 

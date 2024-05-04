@@ -38,6 +38,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         holder.title.setText(product.getTitle());
         holder.description.setText(product.getDescription());
         holder.price.setText(product.getPrice());
+
+        Glide.with(inflater.getContext()).load(product.getThumbnail()).fitCenter().into(holder.thumbnail);
     }
 
     @Override
@@ -48,6 +50,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView title, description, price;
+        ImageView thumbnail;
 
         public ViewHolder(View view) {
             super(view);
@@ -55,7 +58,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             title = view.findViewById(R.id.title);
             description = view.findViewById(R.id.description);
             price = view.findViewById(R.id.price);
-//            thumbnail = view.findViewById(R.id.thumbnail);
+            thumbnail = view.findViewById(R.id.productImage);
         }
     }
 }
