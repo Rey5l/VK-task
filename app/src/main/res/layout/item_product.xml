@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp" >
+            android:layout_marginTop="5dp" >
 
             <TextView
                 android:id="@+id/dollar_sign"
@@ -55,7 +55,7 @@
                 android:textColor="#000"
                 android:textSize="18sp"
                 android:layout_marginEnd="2dp"
-                android:layout_marginTop="16dp"/>
+                />
 
             <TextView
                 android:id="@+id/price"
@@ -65,20 +65,20 @@
                 android:text="@string/price"
                 android:textColor="#000"
                 android:textSize="18sp"
-                android:layout_marginTop="16dp"/>
+                />
 
         </LinearLayout>
 
 
         <Button
-            android:id="@+id/thumbnail"
+            android:id="@+id/button_for_buy"
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/buy_btn"
             android:fontFamily="@font/clash_display_medium"
             android:text="@string/buy_text"
             android:textColor="@android:color/black"
-            tools:ignore="TouchTargetSizeCheck" />
+            />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

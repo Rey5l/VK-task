@@ -1,5 +1,7 @@
 package com.reysl.vk_task;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recView;
     private final ArrayList<Product> products = new ArrayList<>();
     private ProductApi productApi;
-    private Button prevBtn, nextBtn;
+    private Button prevBtn, nextBtn, buyBtn;
 
 
     @Override
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         prevBtn = findViewById(R.id.prevPageButton);
         nextBtn = findViewById(R.id.nextPageButton);
         recView = findViewById(R.id.recView);
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://dummyjson.com/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -77,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void updateRecyclerView() {
         ProductAdapter productAdapter = new ProductAdapter(this, products);
-        recView.setLayoutManager(new GridLayoutManager(this, 2));
+        recView.setLayoutManager(new LinearLayoutManager(this));
         recView.setAdapter(productAdapter);
     }
 
