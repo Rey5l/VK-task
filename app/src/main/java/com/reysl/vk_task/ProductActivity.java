@@ -37,7 +37,6 @@ public class ProductActivity extends AppCompatActivity {
         description.setText(product.getDescription());
         price.setText(product.getPrice());
         Glide.with(ProductActivity.this).load(product.getThumbnail()).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true).into(productImg);
-        System.out.println(product.getThumbnail());
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
