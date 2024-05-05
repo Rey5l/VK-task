@@ -17,146 +17,8 @@
         android:fontFamily="@font/clash_display_semibold"
         android:text="@string/logo_name"
         android:textSize="28sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="40dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="3dp"
-        android:backgroundTint="@android:color/transparent"
-        android:contentDescription="@string/description_btn"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_filter"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="43dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="20dp"
-        android:backgroundTint="@android:color/transparent"
-        android:contentDescription="@string/description_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_search"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/tags_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="29dp"
-        android:fontFamily="@font/clash_display_medium"
-        android:text="@string/tags"
-        android:textSize="21sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_name" />
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="78dp"
-        android:layout_marginTop="14dp"
-        android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@+id/tags_text"
-        tools:layout_editor_absoluteX="0dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_background"
-                android:fontFamily="@font/clash_display_regular"
-                android:padding="12dp"
-                android:text="@string/smartphones"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_background"
-                android:fontFamily="@font/clash_display_regular"
-                android:padding="12dp"
-                android:text="@string/decoration"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_background"
-                android:fontFamily="@font/clash_display_regular"
-                android:padding="12dp"
-                android:text="@string/groceries"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_background"
-                android:fontFamily="@font/clash_display_regular"
-                android:padding="12dp"
-                android:text="@string/groceries"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_background"
-                android:fontFamily="@font/clash_display_regular"
-                android:padding="12dp"
-                android:text="@string/skincare"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_background"
-                android:fontFamily="@font/clash_display_regular"
-                android:padding="12dp"
-                android:text="@string/fragrances"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_background"
-                android:fontFamily="@font/clash_display_regular"
-                android:padding="12dp"
-                android:text="@string/laptops"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-
-        </LinearLayout>
-    </HorizontalScrollView>
 
     <TextView
         android:id="@+id/productsText"
@@ -168,8 +30,7 @@
         android:text="@string/products"
         android:textSize="21sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        android:layout_marginBottom="50dp" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_name" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recView"
@@ -185,6 +46,40 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:spanCount="2"
         tools:listitem="@layout/item_product" />
+
+    <LinearLayout
+        android:id="@+id/pageButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/prevPageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous Page"
+            android:onClick="onPrevPageButtonClick"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/black"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/nextPageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Page"
+            android:onClick="onNextPageButtonClick"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
 
 
 
